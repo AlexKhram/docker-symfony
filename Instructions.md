@@ -12,9 +12,16 @@ docker-compose exec --user=1000:1000 php composer req asset
 
 docker-compose exec --user=1000:1000 php composer req admin
 docker-compose exec --user=1000:1000 php composer require vich/uploader-bundle
+docker-compose exec --user=1000:1000 php composer req security
+
+docker-compose exec --user=1000:1000 php composer require twbs/bootstrap:4.0.0-beta.3
+
+
 #https://github.com/FriendsOfSymfony/FOSUserBundle/pull/2639
 docker-compose exec --user=1000:1000 php composer require swiftmailer-bundle
-docker-compose exec --user=1000:1000 php  composer require friendsofsymfony/user-bundle "dev-master"
+docker-compose exec --user=1000:1000 php composer require friendsofsymfony/user-bundle "dev-master"
+
+
 
 #### Fix permissions (you can skip if command/init-dist-files.sh executed):
     cd ~/sites/symfony && sudo setfacl -R -m u:82:rwX -m u:`whoami`:rwX backend
