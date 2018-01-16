@@ -32,4 +32,4 @@ RUN docker-php-ext-enable xdebug
 #RUN cd /usr/local/bin && curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony \
 #    && chmod a+x /usr/local/bin/symfony && chown 1000:1000 /usr/local/bin/symfony
 
-WORKDIR /var/www/symfony
+WORKDIR /var/www/app
