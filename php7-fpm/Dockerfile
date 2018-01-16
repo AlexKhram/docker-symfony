@@ -29,10 +29,7 @@ RUN pecl install xdebug
 RUN docker-php-ext-enable xdebug
 
 # install symfony installer
-RUN cd /usr/local/bin && curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony \
-    && chmod a+x /usr/local/bin/symfony && chown 1000:1000 /usr/local/bin/symfony
-
-RUN echo 'alias sf="php app/console"' >> ~/.bashrc
-RUN echo 'alias sf3="php bin/console"' >> ~/.bashrc
+#RUN cd /usr/local/bin && curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony \
+#    && chmod a+x /usr/local/bin/symfony && chown 1000:1000 /usr/local/bin/symfony
 
 WORKDIR /var/www/symfony
